@@ -16,12 +16,14 @@ import requests
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-from config import RAW, SK_PRUID
+from config import CITIES, RAW, SK_PRUID
 
 ODHF_URL = "https://www150.statcan.gc.ca/n1/pub/13-26-0001/2020001/ODHF_v1.1.zip"
 NRN_URL = "https://geo.statcan.gc.ca/nrn_rrn/sk/nrn_rrn_sk_GPKG.zip"
-DA_SERVICE = ("https://geo.statcan.gc.ca/geo_wa/rest/services/2021/"
-              "Digital_boundary_files/MapServer/12/query")
+BOUNDARY_SERVICE = ("https://geo.statcan.gc.ca/geo_wa/rest/services/2021/"
+                    "Digital_boundary_files/MapServer")
+DA_SERVICE = f"{BOUNDARY_SERVICE}/12/query"
+CSD_SERVICE = f"{BOUNDARY_SERVICE}/9/query"
 CENSUS_API = ("https://api.statcan.gc.ca/census-recensement/profile/sdmx/rest/"
               "data/STC_CP,DF_DA/A5..1.{chars}.1")
 
@@ -52,10 +54,10 @@ def download_zip(url, dest):
     zipfile.ZipFile(io.BytesIO(r.content)).extractall(dest)
 
 
-def query_service(params, attempts=8):
-    """The DA service returns sporadic HTTP 500s, so retry each request until it parses."""
+def query_service(params, url=DA_SERVICE, attempts=8):
+    """The boundary service returns sporadic HTTP 500s, so retry each request until it parses."""
     for i in range(attempts):
-        r = SESSION.get(DA_SERVICE, params=params, timeout=300)
+        r = SESSION.get(url, params=params, timeout=300)
         if r.status_code == 200:
             try:
                 return r.json()
@@ -82,6 +84,18 @@ def download_da_boundaries(dest, chunk=100):
         print(f"  {len(features)}/{len(ids)} DAs", end="\r")
     print()
     dest.write_text(json.dumps({"type": "FeatureCollection", "features": features}))
+
+
+def download_city_boundaries(dest):
+    """2021 census subdivision boundaries for the eight largest cities."""
+    if dest.exists():
+        print(f"  already have {dest.name}")
+        return
+    ids = ",".join(f"'{c}'" for c in CITIES.values())
+    page = query_service({"where": f"CSDUID IN ({ids})", "outFields": "CSDUID,CSDNAME",
+                          "f": "geojson"}, url=CSD_SERVICE)
+    print(f"  {len(page['features'])} city boundaries")
+    dest.write_text(json.dumps(page))
 
 
 def download_census(dest):
@@ -112,3 +126,5 @@ if __name__ == "__main__":
     download_da_boundaries(RAW / "sk_da_2021.geojson")
     print("Census profile")
     download_census(RAW / "sk_da_census_2021.csv")
+    print("City boundaries")
+    download_city_boundaries(RAW / "sk_cities_2021.geojson")

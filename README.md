@@ -11,6 +11,7 @@ The whole workflow is scripted with **arcpy** and runs from raw open data to fin
 2. Are seniors (65+), Indigenous residents or lower-income areas more likely to face long drives?
 3. Where do areas with long drive times cluster significantly?
 4. If the province added 1–3 emergency sites, where would they bring the most people within 30 minutes?
+5. In the eight largest cities, how evenly do EDs share the population, and how much worse would access get if one ED closed?
 
 ## Key findings
 | Drive time to nearest hospital | All residents | Age 65+ | Indigenous identity |
@@ -35,6 +36,44 @@ The whole workflow is scripted with **arcpy** and runs from raw open data to fin
 | Drive-time service areas | Hot spots and proposed sites |
 |---|---|
 | ![Service areas](maps/02_service_areas.png) | ![Hot spots](maps/03_hot_spots_new_sites.png) |
+
+## City-level results: the eight largest cities
+Inside cities nearly everyone is within 15 minutes, so the city analysis uses 5/10/15-minute bands. It asks two questions: how evenly emergency departments share the load, and what happens if one of them closes. That second question matters because Saskatchewan EDs regularly cut hours or close on short notice; Saskatoon City Hospital's ED, for example, runs reduced hours and closes when no physician is available.
+
+| City | Residents | EDs | Mean drive (min) | Within 5 min | Closure scenario: worst case |
+|---|---|---|---|---|---|
+| Saskatoon | 266,141 | 3 | 5.4 | 41% | St. Paul's: +2.8 min for 76,583 residents |
+| Regina | 226,404 | 2 | 5.1 | 42% | Pasqua: +3.1 min for 118,920 residents |
+| Prince Albert | 37,756 | 1 | 5.1 | 51% | Victoria: +26.7 min for 37,756 residents |
+| Moose Jaw | 33,665 | 1 | 5.3 | 56% | Dr. F.H. Wigmore: +41.3 min for 33,665 residents |
+| Swift Current | 16,750 | 1 | 3.9 | 79% | Cypress Regional: +25.6 min |
+| Yorkton | 16,280 | 1 | 3.4 | 75% | Yorkton Regional: +23.9 min |
+| North Battleford | 13,836 | 1 | 2.6 | 100% | Battlefords Union: +34.1 min |
+| Lloydminster (SK part) | 11,843 | 1 | 3.4 | 97% | Lloydminster Hospital: +32.0 min |
+
+- **Single-ED cities have no backup.** If the one ED in Moose Jaw, Prince Albert, Swift Current, Yorkton, North Battleford or Lloydminster closes, the whole city's nearest emergency care moves 24–41 minutes away. In Moose Jaw's case it moves to Regina's Pasqua Hospital.
+- **Saskatoon and Regina have redundancy in distance but not in capacity.** Closing any one ED adds only 1–3 minutes. But closing Royal University Hospital sends 95% of its 150,000 residents to City Hospital, the ED with reduced hours. The real constraint in the two large cities is capacity, not drive time.
+- **The load is uneven in Saskatoon.** Royal University Hospital is the nearest ED for 56% of residents, St. Paul's for 29% and City Hospital for 15%. In Regina it is close to an even split: Pasqua 52%, General 48%.
+- **The income pattern reverses inside cities.** In Saskatoon, Regina and North Battleford, higher-income areas are *farther* from an ED (Spearman ρ ≈ 0.6, p < 0.001), because newer, wealthier suburbs sit on the city edge and the hospitals are central. Across the province, lower-income areas are the ones with longer drives. Distance is not the main barrier for lower-income city residents, so other factors such as car ownership and transit access are worth studying next.
+
+| Access bands by city | Closure scenarios |
+|---|---|
+| ![City bands](figures/city_access_bands.png) | ![Closures](figures/city_closure_impact.png) |
+
+![Saskatoon](maps/cities/saskatoon.png)
+
+City maps for all eight cities are in [`maps/cities/`](maps/cities/). They show drive-time bands, ED catchment boundaries and city limits on an Esri Light Gray Canvas basemap.
+
+**City method** (`08_city_analysis.py`, `09_city_maps.py`)
+- City limits are the 2021 census subdivision boundaries from Statistics Canada.
+- Each dissemination area is assigned to a city by where its demand point falls.
+- Each ED's catchment is the set of areas for which it is the nearest ED, dissolved into one polygon.
+- Closure scenarios re-solve the OD Cost Matrix for each city with one ED removed. Each reports the residents displaced, their average extra minutes and where they would go instead.
+- The maps use one ArcGIS Pro layout that the script moves from city to city, working like a map series.
+
+**City caveats**
+- A closure sends people to the *nearest* remaining hospital, which may be a small rural facility (for example Wilkie for North Battleford) rather than a regional centre that can take them.
+- Urgent care centres in Saskatoon and Regina are not modelled.
 
 ## Data (all open, Open Government Licence – Canada)
 | Layer | Source | Notes |
@@ -76,20 +115,20 @@ Requires ArcGIS Pro 3.x with the Network Analyst extension (developed on Pro 3.4
 "C:\Program Files\ArcGIS\Pro\bin\Python\envs\arcgispro-py3\python.exe" scripts/run_all.py
 ```
 
-Raw data (~300 MB) is downloaded automatically. The full pipeline takes about 20 minutes. Then open `SK_Health_Access.aprx` in ArcGIS Pro.
+Raw data (~300 MB) is downloaded automatically. The full pipeline takes about 25 minutes. Then open `SK_Health_Access.aprx` in ArcGIS Pro.
 
 ## Repository layout
 ```
-scripts/   01–07 pipeline steps, config.py, run_all.py
+scripts/   01–09 pipeline steps (08–09 = city analysis), config.py, run_all.py
 toolbox/   HealthAccess.pyt (reusable geoprocessing tool)
-maps/      exported layouts (PNG, PDF)
+maps/      exported layouts (PNG, PDF); maps/cities/ has one map per city
 figures/   charts
 outputs/   cleaned hospital list, per-DA access table, summary tables
 data/      raw downloads and file geodatabase (rebuilt by the pipeline, not committed)
 ```
 
 ## Skills demonstrated
-ArcGIS Pro · arcpy · Network Analyst (network dataset creation, OD Cost Matrix, Service Area, Location-Allocation) · Spatial Statistics (Getis-Ord Gi*) · `arcpy.mp` cartography automation · Python toolboxes · REST and SDMX APIs · pandas · matplotlib · data cleaning and QA · census and equity analysis
+ArcGIS Pro · arcpy · Network Analyst (network dataset creation, OD Cost Matrix, Service Area, Location-Allocation, closure scenarios) · Spatial Statistics (Getis-Ord Gi*) · `arcpy.mp` cartography automation · Python toolboxes · REST and SDMX APIs · pandas · matplotlib · data cleaning and QA · census and equity analysis
 
 ## Author and AI use
 Uday Karmoker. The analysis design, code and documentation were developed with help from Claude (Anthropic) as an AI pair programmer. All results were run locally in ArcGIS Pro 3.4 and checked against known values: a provincial population total of 1,132,505, and the Regina–Saskatoon drive time.

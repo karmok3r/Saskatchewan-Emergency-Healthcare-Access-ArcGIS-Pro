@@ -17,6 +17,14 @@ SK_PRUID = "47"
 BREAKS = [15, 30, 60, 90]
 COVERAGE_CUTOFF = 30  # minutes, used for location-allocation
 TRAVEL_MODE = "Driving Time"
+
+# Eight largest cities: name -> 2021 census subdivision UID
+CITIES = {
+    "Saskatoon": "4711066", "Regina": "4706027", "Prince Albert": "4715066",
+    "Moose Jaw": "4707039", "Yorkton": "4709012", "Swift Current": "4708004",
+    "North Battleford": "4716029", "Lloydminster": "4717029",
+}
+CITY_BREAKS = [5, 10, 15]  # minutes; provincial bands are too coarse inside cities
 ND = GDB / "Transport" / "Roads_ND"
 
 # Default speeds (km/h) by NRN road class, used when the NRN speed field is missing

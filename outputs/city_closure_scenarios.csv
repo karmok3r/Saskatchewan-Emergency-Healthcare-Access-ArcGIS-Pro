@@ -1,0 +1,12 @@
+city,ed_closed,residents_displaced,displaced_pct_of_city,mean_added_min_displaced,city_mean_before,city_mean_after,pop_over_10min_before,pop_over_10min_after,redirected_to
+North Battleford,Battlefords Union Hospital,13836.0,100.0,34.1,2.6,36.7,0.0,13836.0,Wilkie and District Health Centre (100%)
+Swift Current,Cypress Regional Hospital,16750.0,100.0,25.6,3.9,29.4,0.0,16750.0,Herbert & District Integrated Health Facility (100%)
+Moose Jaw,Dr. F.H. Wigmore Regional Hospital,33665.0,100.0,41.3,5.3,46.6,0.0,33665.0,Pasqua Hospital (100%)
+Lloydminster,Lloydminster Hospital,11843.0,100.0,32.0,3.4,35.3,0.0,11843.0,Maidstone Health Complex (100%)
+Regina,Pasqua Hospital,118920.0,52.5,3.1,5.1,6.7,0.0,24354.0,Regina General Hospital (100%)
+Regina,Regina General Hospital,107484.0,47.5,2.6,5.1,6.4,0.0,25879.0,Pasqua Hospital (100%)
+Saskatoon,Royal University Hospital,149790.0,56.3,1.3,5.4,6.1,9273.0,22851.0,Saskatoon City Hospital (95%); St. Paul's Hospital (5%)
+Saskatoon,Saskatoon City Hospital,39768.0,14.9,1.5,5.4,5.6,9273.0,9993.0,Royal University Hospital (81%); St. Paul's Hospital (19%)
+Saskatoon,St. Paul's Hospital,76583.0,28.8,2.8,5.4,6.2,9273.0,9862.0,Saskatoon City Hospital (100%)
+Prince Albert,Victoria Hospital,37756.0,100.0,26.7,5.1,31.8,0.0,37756.0,Shellbrook Hospital (100%)
+Yorkton,Yorkton Regional Health Centre,16280.0,100.0,23.9,3.4,27.3,0.0,16280.0,St. Peters Hospital (84%); Canora Hospital (16%)

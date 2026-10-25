@@ -13,7 +13,7 @@ HOSP_ID,facility_name,city,source_facility_type,latitude,longitude,coord_source,
 12,Cypress Regional Hospital,Swift Current,hospital,50.311026,-107.775948,ODHF,
 13,Davidson Health Centre,Davidson,general,51.266611,-105.9844709,ODHF,
 14,Dinsmore Health Care Centre,Dinsmore,hospital,51.333416,-107.44446299999998,ODHF,
-15,Dr. f.h. Wigmore Regional Hospital,Moose Jaw,hospital,50.419139,-105.525048,ODHF,
+15,Dr. F.H. Wigmore Regional Hospital,Moose Jaw,hospital,50.419139,-105.525048,ODHF,
 16,Herbert & District Integrated Health Facility,Herbert,general,50.4263039,-107.21888529999998,ODHF,
 17,Hudson Bay Health Care Facility,Hudson Bay,general,52.85392589999999,-102.387622,ODHF,
 18,Humboldt District Health Complex,Humboldt,general,52.2124959,-105.1210596,ODHF,Humboldt District Hospital
@@ -24,8 +24,8 @@ HOSP_ID,facility_name,city,source_facility_type,latitude,longitude,coord_source,
 23,Kerrobert Integrated Health Centre,Kerrobert,active acute hospital,51.917673,-109.14045,ODHF,
 24,Kindersley Hospital,Kindersley,general,51.470908,-109.164454,ODHF,
 25,Kipling Integrated Health Centre,Kipling,health centre,50.101613,-102.641269,ODHF,Kipling Memorial Health Centre
-26,LA LOCHE HEALTH CENTRE,La Loche,community health centre,56.491177,-109.450785,ODHF,
-27,LA RONGE HEALTH CENTRE,La Ronge,general,55.105254,-105.28969,ODHF,
+26,La Loche Health Centre,La Loche,community health centre,56.491177,-109.450785,ODHF,
+27,La Ronge Health Centre,La Ronge,general,55.105254,-105.28969,ODHF,
 28,Lake Health Centre & Special Care Home,Loon Lake,general,54.027538,-109.158882,ODHF,
 29,Lanigan Hospital,Lanigan,hospital,51.851472,-105.023947,ODHF,
 30,Leader Hospital,Leader,general,50.890964,-109.541368,ODHF,Leader and District Integrated Healthcare Facility
@@ -44,14 +44,14 @@ HOSP_ID,facility_name,city,source_facility_type,latitude,longitude,coord_source,
 43,Riverside Health Complex,Turtleford,general,53.388917000000006,-108.972809,ODHF,
 44,Rosetown and District Health Centre,Rosetown,hospital,51.551089000000005,-107.997869,ODHF,Rosetown Health Centre
 45,Rosthern Hospital,Rosthern,general,52.6665813,-106.3332657,ODHF,
-46,Royal University Hospital (Ruh),Saskatoon,hospital,52.130843,-106.641547,ODHF,Jim Pattison Children's Hospital
-47,ST. JOSEPH'S HEALTH CENTRE (ÎLE DE LA CROSSE),Île-À-La-Crosse,,55.445653,-107.899584,ODHF,
-48,Saskatoon City Hospital,Saskatoon,hospital,52.13643,-106.65391499999998,ODHF,
-49,Shaunavon Hospital and Care Centre,Shaunavon,general,49.6514731,-108.4048574,ODHF,
-50,Shellbrook Hospital,Shellbrook,hosptial,53.218535,-106.401225,ODHF,Parkland Integrated Health Centre
-51,Southeast Integrated Care Centre  Moosomin,Moosomin,long-term care/outpatient/emerg,50.136107,-101.656361,ODHF,
-52,Spiritwood Collaborative Emergency Centre,Spiritwood,,53.38209987117642,-107.5015279266776,NRN place-name centroid,Spiritwood and District Health Complex Long-Term Care
-53,St. Anthony's Hospital,Esterhazy,general,50.6504867,-102.0841431,ODHF,Emmanuel Health - St. Anthonys Hospital
+46,Royal University Hospital,Saskatoon,hospital,52.130843,-106.641547,ODHF,Jim Pattison Children's Hospital
+47,Saskatoon City Hospital,Saskatoon,hospital,52.13643,-106.65391499999998,ODHF,
+48,Shaunavon Hospital and Care Centre,Shaunavon,general,49.6514731,-108.4048574,ODHF,
+49,Shellbrook Hospital,Shellbrook,hosptial,53.218535,-106.401225,ODHF,Parkland Integrated Health Centre
+50,Southeast Integrated Care Centre  Moosomin,Moosomin,long-term care/outpatient/emerg,50.136107,-101.656361,ODHF,
+51,Spiritwood Collaborative Emergency Centre,Spiritwood,,53.38209987117642,-107.5015279266776,NRN place-name centroid,Spiritwood and District Health Complex Long-Term Care
+52,St. Anthony's Hospital,Esterhazy,general,50.6504867,-102.0841431,ODHF,Emmanuel Health - St. Anthonys Hospital
+53,St. Joseph's Health Centre (Île-à-la-Crosse),Île-À-La-Crosse,,55.445653,-107.899584,ODHF,
 54,St. Joseph's Hospital,Estevan,hospital,49.152536,-103.012175,ODHF,Emmanuel Health - St. Josephs Hospital [Estevan]
 55,St. Joseph's Hospital - Gravelbourg,Gravelbourg,general,49.8742767,-106.5629233,ODHF,Emmanuel Health - St. Josephs Hospital/Foyer dYouville
 56,St. Joseph's Integrated Care Centre,Lestock,general,51.314224,-103.9829201,ODHF,

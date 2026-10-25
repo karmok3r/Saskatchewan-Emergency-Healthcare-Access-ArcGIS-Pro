@@ -25,6 +25,15 @@ ROADSEG = str(NRN / "main.NRN_SK_15_0_ROADSEG")
 EXCLUDE = re.compile(r"psychiatric|rehabilitation|mental health\)|^saskatchewan hospital", re.I)
 # Facilities replaced by a newer hospital after the ODHF sources were compiled
 SUPERSEDED = {"Moose Jaw Union Hospital"}  # replaced by Dr. F.H. Wigmore Regional (2015)
+# Capitalisation and spacing errors in the ODHF source names
+NAME_FIXES = {
+    "Dr. f.h. Wigmore Regional Hospital": "Dr. F.H. Wigmore Regional Hospital",
+    "Royal University Hospital (Ruh)": "Royal University Hospital",
+    "LA LOCHE HEALTH CENTRE": "La Loche Health Centre",
+    "LA RONGE HEALTH CENTRE": "La Ronge Health Centre",
+    "ST. JOSEPH'S HEALTH CENTRE (ÎLE DE LA CROSSE)": "St. Joseph's Health Centre (Île-à-la-Crosse)",
+    "Southeast Integrated Care Centre  Moosomin": "Southeast Integrated Care Centre (Moosomin)",
+}
 # Hospitals closer than this are treated as one site (duplicate records across sources)
 DEDUP_M = 400
 # When records merge, keep the name of the main acute-care hospital
@@ -88,6 +97,7 @@ def clean_hospitals():
                         "latitude", "longitude", "coord_source"]].copy()
     out["merged_records"] = ["; ".join(merged_names[k]) for k in keep]
     out["city"] = out["city"].str.title()
+    out["facility_name"] = out["facility_name"].replace(NAME_FIXES)
     out = out.sort_values("facility_name").reset_index(drop=True)
     out.insert(0, "HOSP_ID", range(1, len(out) + 1))
     OUTPUTS.mkdir(exist_ok=True)

@@ -1,0 +1,12 @@
+CITY,NEAR_HOSP,population,pop_65plus,indig_pop,das,mean_drive_min,share_of_city_pct
+Lloydminster,Lloydminster Hospital,11843.0,840.0,2110.0,17,2.9728880952137446,100.0
+Moose Jaw,Dr. F.H. Wigmore Regional Hospital,33665.0,7110.0,2370.0,64,5.425554505006164,100.0
+North Battleford,Battlefords Union Hospital,13836.0,2600.0,3580.0,25,2.393977994085149,100.0
+Prince Albert,Victoria Hospital,37756.0,5970.0,16145.0,68,4.848645564565201,100.0
+Regina,Pasqua Hospital,118920.0,17265.0,13185.0,207,4.887886140353233,52.5
+Regina,Regina General Hospital,107484.0,17990.0,9900.0,177,5.032879627400387,47.5
+Saskatoon,Royal University Hospital,149790.0,23075.0,11355.0,180,5.408980408925301,56.3
+Saskatoon,Saskatoon City Hospital,39768.0,7895.0,4510.0,75,4.07425396777312,14.9
+Saskatoon,St. Paul's Hospital,76583.0,9520.0,13745.0,116,3.5057791290214864,28.8
+Swift Current,Cypress Regional Hospital,16750.0,3710.0,785.0,30,4.042113634294832,100.0
+Yorkton,Yorkton Regional Health Centre,16280.0,3440.0,2030.0,32,3.3949457874425484,100.0

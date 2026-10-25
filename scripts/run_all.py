@@ -5,7 +5,7 @@ from pathlib import Path
 HERE = Path(__file__).parent
 STEPS = ["01_download_data.py", "02_prepare_data.py", "03_build_network.py",
          "04_access_analysis.py", "05_hotspots_equity.py", "06_location_allocation.py",
-         "07_make_maps.py"]
+         "07_make_maps.py", "08_city_analysis.py", "09_city_maps.py"]
 
 if __name__ == "__main__":
     for step in STEPS:

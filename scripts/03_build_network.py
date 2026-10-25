@@ -92,7 +92,7 @@ def smoke_test():
     route.load(arcpy.nax.RouteInputDataType.Stops,
                arcpy.management.MakeFeatureLayer(
                    hosp, "stops", "facility_name IN ('Regina General Hospital', "
-                                  "'Royal University Hospital (Ruh)')")[0])
+                                  "'Royal University Hospital')")[0])
     result = route.solve()
     with result.searchCursor(arcpy.nax.RouteOutputDataType.Routes,
                              ["Total_Minutes", "Total_Kilometers"]) as cur:
