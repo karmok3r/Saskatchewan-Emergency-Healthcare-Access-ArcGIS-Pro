@@ -1,0 +1,71 @@
+HOSP_ID,facility_name,city,source_facility_type,latitude,longitude,coord_source,merged_records
+1,All Nations' Healing Hospital,Fort Quappelle,general,50.76168870000001,-103.7870088,ODHF,
+2,Arcola Health Centre,Arcola,general,49.637817600000005,-102.4846027,ODHF,
+3,Assiniboia Union Hospital,Assiniboia,hospital,49.628594,-105.983248,ODHF,
+4,Athabasca Health Facility- Yutthe Dene Nakohoki Health Facility,Black Lake,active acute hospital,59.13076593680633,-105.60381092389493,NRN place-name centroid,
+5,Balcarres Integrated Care Centre,Balcarres,general,50.803208000000005,-103.550837,ODHF,
+6,Battlefords Union Hospital,North Battleford,hospital,52.771802,-108.288771,ODHF,Battlefords Union Hospital and Mental Health Centre  Battlefords Union Hospital
+7,Biggar Hospital,Biggar,general,52.0566752,-107.9968687,ODHF,Biggar and District Health Centre
+8,Broadview Hospital,Broadview,hospital,50.373996000000005,-102.584409,ODHF,
+9,Canora Hospital,Canora,,51.626261,-102.439565,ODHF,
+10,Carrot River Health Centre,Carrot River,community health centre,53.28255600000001,-103.591844,ODHF,
+11,Central Butte Regency Hospital,Central Butte,hospital,50.799886,-106.50876,ODHF,
+12,Cypress Regional Hospital,Swift Current,hospital,50.311026,-107.775948,ODHF,
+13,Davidson Health Centre,Davidson,general,51.266611,-105.9844709,ODHF,
+14,Dinsmore Health Care Centre,Dinsmore,hospital,51.333416,-107.44446299999998,ODHF,
+15,Dr. f.h. Wigmore Regional Hospital,Moose Jaw,hospital,50.419139,-105.525048,ODHF,
+16,Herbert & District Integrated Health Facility,Herbert,general,50.4263039,-107.21888529999998,ODHF,
+17,Hudson Bay Health Care Facility,Hudson Bay,general,52.85392589999999,-102.387622,ODHF,
+18,Humboldt District Health Complex,Humboldt,general,52.2124959,-105.1210596,ODHF,Humboldt District Hospital
+19,Indian Head Union Hospital,Indian Head,general,50.536462,-103.6785068,ODHF,
+20,Kamsack Hospital and Nursing Home,Kamsack,hospital and nursing home,51.556726,-101.887773,ODHF,
+21,Kelvington Hospital,Kelvington,general,52.158065,-103.526917,ODHF,
+22,Kerrobert Hospital,Kerrobert,general,51.913666,-109.131866,ODHF,
+23,Kerrobert Integrated Health Centre,Kerrobert,active acute hospital,51.917673,-109.14045,ODHF,
+24,Kindersley Hospital,Kindersley,general,51.470908,-109.164454,ODHF,
+25,Kipling Integrated Health Centre,Kipling,health centre,50.101613,-102.641269,ODHF,Kipling Memorial Health Centre
+26,LA LOCHE HEALTH CENTRE,La Loche,community health centre,56.491177,-109.450785,ODHF,
+27,LA RONGE HEALTH CENTRE,La Ronge,general,55.105254,-105.28969,ODHF,
+28,Lake Health Centre & Special Care Home,Loon Lake,general,54.027538,-109.158882,ODHF,
+29,Lanigan Hospital,Lanigan,hospital,51.851472,-105.023947,ODHF,
+30,Leader Hospital,Leader,general,50.890964,-109.541368,ODHF,Leader and District Integrated Healthcare Facility
+31,Lloydminster Hospital,Lloydminster,general,53.272630500000005,-109.9895267,ODHF,
+32,Maidstone Health Complex,Maidstone,general,53.090537,-109.29367,ODHF,
+33,Maple Creek Hospital,Maple Creek,general,49.90328,-109.49,ODHF,
+34,Meadow Lake Hospital,Meadow Lake,general,54.1235688,-108.4347361,ODHF,
+35,Melfort Hospital,Melfort,hospital,52.865784,-104.614632,ODHF,
+36,Nipawin Health Care Facility,Nipawin,,53.356182,-104.004036,ODHF,Nipawin Hospital
+37,Outlook Hospital,Outlook,general,51.483632,-107.062979,ODHF,
+38,Pasqua Hospital,Regina,hospital (emergency),50.454433,-104.638463,ODHF,
+39,Porcupine Carragana Hospital,Porcupine Plain,general,52.596679,-103.262613,ODHF,
+40,Radville Marian Health Centre,Radville,hospital,49.46414,-104.305331,ODHF,
+41,Redvers Health Centre,Redvers,"primary care, clinic, longterm care",49.572789,-101.694417,ODHF,
+42,Regina General Hospital,Regina,general,50.4439653,-104.6009937,ODHF,
+43,Riverside Health Complex,Turtleford,general,53.388917000000006,-108.972809,ODHF,
+44,Rosetown and District Health Centre,Rosetown,hospital,51.551089000000005,-107.997869,ODHF,Rosetown Health Centre
+45,Rosthern Hospital,Rosthern,general,52.6665813,-106.3332657,ODHF,
+46,Royal University Hospital (Ruh),Saskatoon,hospital,52.130843,-106.641547,ODHF,Jim Pattison Children's Hospital
+47,ST. JOSEPH'S HEALTH CENTRE (ÎLE DE LA CROSSE),Île-À-La-Crosse,,55.445653,-107.899584,ODHF,
+48,Saskatoon City Hospital,Saskatoon,hospital,52.13643,-106.65391499999998,ODHF,
+49,Shaunavon Hospital and Care Centre,Shaunavon,general,49.6514731,-108.4048574,ODHF,
+50,Shellbrook Hospital,Shellbrook,hosptial,53.218535,-106.401225,ODHF,Parkland Integrated Health Centre
+51,Southeast Integrated Care Centre  Moosomin,Moosomin,long-term care/outpatient/emerg,50.136107,-101.656361,ODHF,
+52,Spiritwood Collaborative Emergency Centre,Spiritwood,,53.38209987117642,-107.5015279266776,NRN place-name centroid,Spiritwood and District Health Complex Long-Term Care
+53,St. Anthony's Hospital,Esterhazy,general,50.6504867,-102.0841431,ODHF,Emmanuel Health - St. Anthonys Hospital
+54,St. Joseph's Hospital,Estevan,hospital,49.152536,-103.012175,ODHF,Emmanuel Health - St. Josephs Hospital [Estevan]
+55,St. Joseph's Hospital - Gravelbourg,Gravelbourg,general,49.8742767,-106.5629233,ODHF,Emmanuel Health - St. Josephs Hospital/Foyer dYouville
+56,St. Joseph's Integrated Care Centre,Lestock,general,51.314224,-103.9829201,ODHF,
+57,St. Paul's Hospital,Saskatoon,general,52.126313,-106.696366,ODHF,
+58,St. Peters Hospital,Melville,general,50.9376801,-102.8205106,ODHF,
+59,Tisdale Hospital,Tisdale,general,52.856825,-104.054939,ODHF,
+60,Unity & District Health Centre,Unity,general,52.442736,-109.173493,ODHF,Unity and District Health Centre
+61,Victoria Hospital,Prince Albert,hospital,53.192095,-105.784059,ODHF,Pineview Hospital; Victoria Hospital and Regional Mental Health Centre  Victoria Regional Mental Health Centre
+62,Wadena Hospital,Wadena,general,51.9519198,-103.7943137,ODHF,
+63,Wakaw Health Centre,Wakaw,general,52.6509338,-105.742114,ODHF,
+64,Watrous District Health Complex,Watrous,chronic care,51.674001200000006,-105.4556517,ODHF,Watrous District Health Complex  Watrous Hospital
+65,Wawota Memorial Health Centre,Wawota,general,49.9060021,-102.022331,ODHF,
+66,Weyburn General Hospital,Weyburn,general,49.668899,-103.853095,ODHF,Weyburn General Hospital and Mental Health Centre  Weyburn General Hospital; Weyburn General Hospital and Mental Health Centre  Weyburn Mental Health Centre
+67,Wilkie and District Health Centre,Wilkie,hospital,52.405556,-108.701125,ODHF,
+68,Wolseley Memorial Integrated Health Centre,Wolseley,general,50.4266315,-103.2685272,ODHF,
+69,Wynyard Hospital,Wynyard,general,51.7675013,-104.1676207,ODHF,
+70,Yorkton Regional Health Centre,Yorkton,psychiatric,51.2022464,-102.4806123,ODHF,Yorkton Regional and Mental Health Centre  Yorkton Regional Health Centre

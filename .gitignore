@@ -1,0 +1,13 @@
+# Raw downloads (~300 MB) are re-created by scripts/01_download_data.py
+data/raw/
+# File geodatabase and network dataset are rebuilt by the pipeline
+data/*.gdb/
+data/roads_nd_template.xml
+# ArcGIS Pro working files
+*.aprx.lock
+.backups/
+ImportLog/
+Index/
+GpMessages/
+*.atbx
+__pycache__/
