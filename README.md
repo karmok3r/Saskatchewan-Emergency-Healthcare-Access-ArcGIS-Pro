@@ -60,9 +60,61 @@ Inside cities nearly everyone is within 15 minutes, so the city analysis uses 5/
 |---|---|
 | ![City bands](figures/city_access_bands.png) | ![Closures](figures/city_closure_impact.png) |
 
+### City by city
+Each map shows drive time from every dissemination area to its nearest emergency department (ED) in 5-minute bands, with ED catchment boundaries (black), city limits (red) and EDs (red dots). PDF versions are in [`maps/cities/`](maps/cities/).
+
+#### Saskatoon: 266,141 residents, 3 EDs
 ![Saskatoon](maps/cities/saskatoon.png)
 
-City maps for all eight cities are in [`maps/cities/`](maps/cities/). They show drive-time bands, ED catchment boundaries and city limits on an Esri Light Gray Canvas basemap.
+- **Access:** 41% of residents are within 5 minutes of an ED and nearly all of the rest within 10. The longest drive is 10.8 minutes, in the new north-east suburbs across the river.
+- **Load:** Royal University Hospital is the nearest ED for 56% of the city (149,790 people), St. Paul's for 29% (76,583) and City Hospital for 15% (39,768). St. Paul's catchment holds the most Indigenous residents (13,745), on the west side.
+- **Closures:** Closing any one ED adds only 1–3 minutes on average. But City Hospital is the fallback for 95% of Royal University's catchment and 100% of St. Paul's, and it is the ED with reduced hours. If Royal University closed, 22,851 people would be more than 10 minutes from an ED, up from 9,273.
+- **Income:** Higher-income areas are farther from an ED (ρ = 0.60), because the newer suburbs on the city edge are wealthier.
+
+#### Regina: 226,404 residents, 2 EDs
+![Regina](maps/cities/regina.png)
+
+- **Access:** 42% of residents are within 5 minutes and everyone is within 10; the longest drive is 9.4 minutes.
+- **Load:** The two EDs split the city almost evenly: Pasqua serves the west (52%, 118,920 people) and Regina General the east (48%, 107,484).
+- **Closures:** Each hospital is the other's only backup. Closing Pasqua adds 3.1 minutes for its 118,920 residents and leaves 24,354 people more than 10 minutes away, up from none today. Closing Regina General adds 2.6 minutes and leaves 25,879 people beyond 10 minutes.
+- **Income:** Same suburban pattern as Saskatoon (ρ = 0.61). The outer suburbs have the longest drives.
+
+#### Prince Albert: 37,756 residents, 1 ED
+![Prince Albert](maps/cities/prince_albert.png)
+
+- **Access:** Victoria Hospital is within 5 minutes for 51% of residents and within 10 minutes for everyone.
+- **Population:** It has the largest Indigenous population of the eight cities, 16,145 people (43% of residents). Victoria Hospital is also the referral centre for much of northern Saskatchewan.
+- **Closure:** If Victoria's ED closed, the nearest alternative is Shellbrook, a small rural hospital. That adds 26.7 minutes for the whole city.
+
+#### Moose Jaw: 33,665 residents, 1 ED
+![Moose Jaw](maps/cities/moose_jaw.png)
+
+- **Access:** Dr. F.H. Wigmore Regional Hospital sits on the north edge of the city. 56% of residents are within 5 minutes; the south and west sides of the city are 5–10 minutes away.
+- **Closure:** This is the most exposed city. Closing Wigmore's ED sends all 33,665 residents to Regina's Pasqua Hospital, **41.3 minutes** farther away on average.
+
+#### Swift Current: 16,750 residents, 1 ED
+![Swift Current](maps/cities/swift_current.png)
+
+- **Access:** Compact and well served: 79% of residents are within 5 minutes of Cypress Regional Hospital, and the longest drive is 7.4 minutes.
+- **Closure:** The next nearest ED is the small facility in Herbert, adding 25.6 minutes.
+
+#### Yorkton: 16,280 residents, 1 ED
+![Yorkton](maps/cities/yorkton.png)
+
+- **Access:** 75% of residents are within 5 minutes of Yorkton Regional Health Centre, and everyone is within 8.3 minutes.
+- **Closure:** Residents would split between Melville's St. Peter's Hospital (84%) and Canora (16%), adding 23.9 minutes on average.
+
+#### North Battleford: 13,836 residents, 1 ED
+![North Battleford](maps/cities/north_battleford.png)
+
+- **Access:** The best-served city: every resident is within 5 minutes of Battlefords Union Hospital (mean 2.6 minutes). It also has the second-largest Indigenous share of the eight cities (26%).
+- **Closure:** The nearest alternative is Wilkie, a small district hospital, which adds 34.1 minutes. In practice patients would more likely go to Saskatoon, which is farther again.
+
+#### Lloydminster (Saskatchewan side): 11,843 residents, 1 ED
+![Lloydminster](maps/cities/lloydminster.png)
+
+- **Access:** 97% of Saskatchewan-side residents are within 5 minutes of Lloydminster Hospital.
+- **Closure:** The nearest Saskatchewan alternative is Maidstone, adding 32.0 minutes. This overstates the real impact, because Alberta hospitals such as Vermilion are not in the model. This is the clearest example of the province-boundary limitation.
 
 **City method** (`08_city_analysis.py`, `09_city_maps.py`)
 - City limits are the 2021 census subdivision boundaries from Statistics Canada.
